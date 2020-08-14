@@ -1,9 +1,11 @@
 <?php
   
     
-    include('include.php'); 
+    /*include('include.php'); 
     $icl_photo = incl(2); 
-    include('test-photo/test-photo.php'); 
+    echo $icl_photo;
+    include('test-photo/test-photo.php'); */
+    include('basic.php');
     include('telegram_bot/vendor/autoload.php'); //Подключаем библиотеку
     use Telegram\Bot\Api; 
     

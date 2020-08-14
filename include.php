@@ -1,7 +1,7 @@
 <?php
 
 
-function incl($number)
+function incl($number, $id)
 {
 
 $host = 'localhost';
@@ -12,7 +12,7 @@ $database = 'sv';
 $link = mysqli_connect($host, $user, $password, $database) 
     or die("Ошибка " . mysqli_error($link)); 
      
-$query ="SELECT * FROM tel_bot";
+$query ="SELECT id, photo FROM tel_bot WHERE id = $id";
  
 $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
 
@@ -31,8 +31,9 @@ if($result)
     // очищаем результат
     mysqli_free_result($result);
 }
- 
+
 mysqli_close($link);
+
 	return $row[$number];
 	
 }

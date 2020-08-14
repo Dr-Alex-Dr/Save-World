@@ -1,10 +1,23 @@
+
+<?php
+
+include("include.php");
+$num = 1;
+$Name =  incl(1, $num);
+
+$num++;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script> var name_photo='<?= $Name ?>'; </script>
 	<meta charset="UTF-8">
 	
 	<title>Save World</title>
 	<link rel="stylesheet" type="text/css" href="css/stil.css">
+	<link rel="stylesheet" type="text/css" href="test-photo/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;1,400;1,600;1,700;1,800&family=Roboto:wght@100&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -82,6 +95,22 @@ human activity.</p>
 	 	
 	 	<div id="map"></div>
 	 </main>
+
+	 <div class="photo">
+	 	   
+    <script type="text/javascript" src="test-photo/java.js"></script>
+<div class="slider">
+    <div class="item">
+        <img src="test-photo/img/slide2.jpg" name="slide_show">
+    </div>
+
+
+   
+
+    <a class="prev" onclick="minusSlide()" >&#10094;</a>
+    <a class="next" onclick="plusSlide()" >&#10095;</a>
+</div>
+	 </div>
 
 	<script type="text/javascript" src="scrol.js"></script>
 
