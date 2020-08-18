@@ -12,10 +12,11 @@ $database = 'sv';
 $link = mysqli_connect($host, $user, $password, $database) 
     or die("Ошибка " . mysqli_error($link)); 
      
-$query ="SELECT id, photo FROM tel_bot WHERE id = $id";
+$query ="SELECT id, photo, lat, lon FROM tel_bot WHERE id = $id";
  
 $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
 
+$mass=[];
 if($result)
 {
     $rows = mysqli_num_rows($result); // количество полученных строк
@@ -26,11 +27,12 @@ if($result)
         $row = mysqli_fetch_row($result);
            
     }
-    
-     
+
+
     // очищаем результат
     mysqli_free_result($result);
 }
+
 
 mysqli_close($link);
 
